@@ -31,7 +31,26 @@ namespace CSharpEntityFrameworkPlayers
         [Column("partite_giocate")]
         public int Giocate { get; set; }
 
+        public string TeamID { get; set; }
+        public Team Team { get; set; }
 
+
+
+        public override string ToString()
+        {
+            return "Nome: " + Name + "\nCognome: " + Surname + "\nPunteggio: " + Punteggio + "\nVittorie" + Vinte + "/" + Giocate;
+        }
+
+        /*public void SetNome(string nome)
+        {
+            Player.Name.crud(nome);
+        }
+        public void SetCognome(string nome)
+        {
+            Cognome.set(nome);
+        } */
 
     }
+
+    
 }

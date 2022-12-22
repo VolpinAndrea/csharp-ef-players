@@ -10,6 +10,8 @@ namespace CSharpEntityFrameworkPlayers
     internal class SportContext : DbContext
     {
         public DbSet<Player> Player { get; set; }
+        public DbSet<Team> Team { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=localhost;Database=SportDB;Integrated Security=True;TrustServerCertificate=True");
